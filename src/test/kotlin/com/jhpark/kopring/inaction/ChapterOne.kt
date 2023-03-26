@@ -1,6 +1,9 @@
 package com.jhpark.kopring.inaction
 
+import org.junit.jupiter.api.Test
 import kotlin.RuntimeException
+import com.jhpark.kopring.inaction.ChapterThree.Companion.lastChar
+import io.kotest.matchers.shouldBe
 
 class ChapterOne {
     // 데이터 클래스
@@ -11,7 +14,8 @@ class ChapterOne {
     )
 
     // 최상위 함수
-    fun main() {
+    @Test
+    fun `Ch1 Main`() {
         val persons = listOf(
             Person("Alice"),
             Person("Bob", age = 29) // 이름 붙은 파라미터
@@ -22,6 +26,8 @@ class ChapterOne {
         val javaCode = TestingJavaCode()
         javaCode.print()
 
+        "Kotling".lastChar() shouldBe 'g'
+
         try {
             throw RuntimeException("?")
         } catch (e: RuntimeException) {
@@ -31,5 +37,7 @@ class ChapterOne {
         //catch 문에서 return 을 사용했기에 아래는 프린팅X
         println("After Catch block")
 
+
     }
+
 }
