@@ -6,7 +6,7 @@ internal open class TalkativeButton {
     protected fun whisper() = println("Let's talk!")
 }
 
-fun TalkativeButton.giveSpeesh() {
-    yell()
-    whisper() // 오류: "whisper"에 접근할 수 없음: "whisper"는 "TalkativeButton"의 "protected" 멤버임
-}
+//fun TalkativeButton.giveSpeesh() {
+//    yell()
+//    whisper() // 오류: "whisper"에 접근할 수 없음: "whisper"는 "TalkativeButton"의 "protected" 멤버임
+//}
